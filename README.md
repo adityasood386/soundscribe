@@ -2,28 +2,28 @@
 
 ### Your Personal Space for Music & Audiobooks
 
-**SoundScribe** is a web-based audio streaming platform built using JavaServer Pages (JSP) and PostgreSQL. It provides users with a personalized space to explore their music library, listen to songs, enjoy audiobooks, and manage audio content through an intuitive interface.
+SoundScribe is a web-based audio streaming platform developed using **Java, JSP, HTML5, Tailwind CSS, JavaScript, and PostgreSQL**. It brings music streaming and audiobook listening together in one platform, providing users with an intuitive interface to explore, play, and manage audio content.
 
 ---
 
 ## ✨ Features
 
 ### 🎵 Music Streaming
-- Browse and explore your personal music library.
+- Browse and explore the music library.
 - Play and pause audio tracks.
-- Skip to the next or previous track.
+- Skip to the next and previous tracks.
 - Adjust playback volume.
 - Track playback progress and seek through songs.
 - Automatically play the next song when the current track ends.
 - Search songs by title or artist.
-- Display embedded album artwork using audio metadata.
+- Display album artwork using audio metadata.
 
 ### 📚 Audiobook Experience
 - Dedicated audiobook listening section.
 - Browse available audiobooks with cover artwork.
 - Display book titles and narrator information.
-- Playback controls with seek functionality.
-- Skip forward by 30 seconds or backward by 15 seconds.
+- Audio playback with seek functionality.
+- Skip forward by 30 seconds and backward by 15 seconds.
 - Adjustable playback speed (0.75x to 2x).
 
 ### 👤 User Management
@@ -38,10 +38,10 @@
 - Check draft names.
 - Delete unwanted drafts.
 
-### 🎨 Modern User Interface
-- Dark-themed interface.
+### 🎨 User Interface
+- Modern dark-themed interface.
 - Responsive layouts.
-- Modern styling with Tailwind CSS.
+- Tailwind CSS utility-based styling.
 - Interactive audio player.
 - Smooth transitions and animations.
 
@@ -52,31 +52,18 @@
 | Technology | Purpose |
 |---|---|
 | Java | Backend programming |
-| JSP (JavaServer Pages) | Dynamic web pages |
-| HTML5 | Page structure |
-| CSS3 | Styling |
-| JavaScript | Interactive functionality |
-| Tailwind CSS | Modern UI styling |
-| PostgreSQL | Database management |
+| JSP (JavaServer Pages) | Dynamic server-side web pages |
+| HTML5 | Frontend structure |
+| Tailwind CSS | Utility-first CSS styling |
+| JavaScript | Client-side interactivity |
+| PostgreSQL | Relational database management |
 | JDBC | Database connectivity |
-| jsmediatags | Extracting audio metadata |
-| Apache Tomcat | Web application server |
-
----
-
-## 📸 Screenshots
-
-Add screenshots of your application here.
-
-| Music Dashboard | Audiobook Player |
-|---|---|
-| Add dashboard screenshot | Add audiobook screenshot |
+| Apache Tomcat 10.1 | Web application server |
+| jsmediatags | Audio metadata extraction |
 
 ---
 
 ## ⚙️ Installation & Setup
-
-Follow these steps to run SoundScribe locally.
 
 ### 1. Clone the Repository
 
@@ -98,7 +85,7 @@ Make sure you have installed:
 - Apache Tomcat 10.1
 - PostgreSQL
 - PostgreSQL JDBC Driver
-- An IDE such as Eclipse or IntelliJ IDEA
+- Eclipse IDE or IntelliJ IDEA
 
 ### 3. Database Configuration
 
@@ -108,7 +95,9 @@ Create a PostgreSQL database:
 CREATE DATABASE audio_streaming_app_1;
 ```
 
-Configure your PostgreSQL connection in the JSP database connection code.
+Configure your PostgreSQL connection in the application's database connection code.
+
+Example JDBC connection:
 
 ```java
 Class.forName("org.postgresql.Driver");
@@ -120,19 +109,19 @@ Connection con = DriverManager.getConnection(
 );
 ```
 
-**Note:** Configure the required database tables according to the SQL queries used in the application. The repository does not currently include a database schema or SQL initialization script.
+**Note:** Create the required database tables according to the SQL queries used in the application.
 
 ### 4. Configure Apache Tomcat
 
-1. Open your project in Eclipse or your preferred Java IDE.
-2. Configure Apache Tomcat as the application server.
+1. Import the project into Eclipse or your preferred Java IDE.
+2. Configure Apache Tomcat 10.1 as the application server.
 3. Add the PostgreSQL JDBC driver to the project.
-4. Configure the database credentials.
+4. Configure your database credentials.
 5. Deploy the project to Tomcat.
 
 ### 5. Run the Application
 
-Start the Tomcat server and open:
+Start the Tomcat server and open your browser:
 
 ```text
 http://localhost:8080/soundscribe/
@@ -145,39 +134,31 @@ http://localhost:8080/soundscribe/
 ```text
 soundscribe/
 │
-├── audiobooks.jsp       # Audiobook browsing and player
-├── dashboard.jsp        # Main music streaming dashboard
-├── login.jsp            # User login
-├── register.jsp         # User registration
-├── registerAction.jsp   # Registration processing
-├── logout.jsp           # Logout functionality
-├── navbar.jsp           # Navigation component
-├── uploadSong.jsp       # Audio upload functionality
-├── content.jsp          # Content handling
-├── saveDraft.jsp        # Save drafts
-├── checkDraftName.jsp   # Draft name validation
-├── deleteDraft.jsp      # Delete drafts
-└── one.jsp              # Additional application page
+├── audiobooks.jsp
+├── dashboard.jsp
+├── login.jsp
+├── register.jsp
+├── registerAction.jsp
+├── logout.jsp
+├── navbar.jsp
+├── uploadSong.jsp
+├── content.jsp
+├── saveDraft.jsp
+├── checkDraftName.jsp
+├── deleteDraft.jsp
+└── one.jsp
 ```
 
----
-
-## 🔒 Security Notes
-
-- Configure database credentials outside publicly accessible source code.
-- Use secure password hashing for user authentication.
-- Validate uploaded audio files and restrict file types and sizes.
-- Use prepared statements to prevent SQL injection.
-- Configure appropriate session security.
+*The structure above highlights the main JSP application files.*
 
 ---
 
-## 🚀 Future Enhancements
+## 🔮 Future Enhancements
 
 - Playlist creation and management.
 - Recently played tracks.
 - Favorites and liked songs.
-- Personalized listening recommendations.
+- Personalized music recommendations.
 - User profile customization.
 - Improved mobile experience.
 - Audio streaming quality options.
@@ -187,7 +168,9 @@ soundscribe/
 
 ## 🎯 Project Objective
 
-The objective of SoundScribe is to develop a web-based audio streaming platform that combines music playback and audiobook listening in one place while providing hands-on experience with JavaServer Pages, database connectivity, server-side programming, and frontend development.
+The objective of SoundScribe is to develop a web-based audio streaming platform that combines music playback and audiobook listening in one place.
+
+The project demonstrates practical implementation of Java web development, JSP, frontend technologies, database connectivity, session management, and interactive media playback.
 
 ---
 
@@ -196,12 +179,12 @@ The objective of SoundScribe is to develop a web-based audio streaming platform 
 **Aditya Sood**
 
 - GitHub: [@adityasood386](https://github.com/adityasood386)
-- Project: [SoundScribe](https://github.com/adityasood386/soundscribe)
+- Repository: [SoundScribe](https://github.com/adityasood386/soundscribe)
 
 ---
 
 <p align="center">
-  <b>Built with ❤️ using Java, JSP & PostgreSQL</b>
+  Made with ❤️ using Java, JSP, HTML5, Tailwind CSS & PostgreSQL
 </p>
 
 <p align="center">
